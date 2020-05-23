@@ -1,37 +1,60 @@
-## Welcome to GitHub Pages
+---
+layout: default
+title: A Survey of Machine Learning for Big Code and Naturalness
+---
+### Machine Learning on Source Code
 
-You can use the [editor on GitHub](https://github.com/minghao-97/minghao-97.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+The billions of lines of source code that have been written contain
+implicit knowledge about how to write good code, code that is
+easy to read and to debug.
+A recent line of research aims to find statistical patterns in large
+corpora of code to drive *new software development tools and program
+analyses*.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+This website and the accompanying [article](https://arxiv.org/abs/1709.06182) surveys the work in this emerging area.
 
-### Markdown
+Like writing and speaking, software development is an act of human communication.
+At its core,
+the naturalness of software employs statistical modeling over big code to
+reason about rich variety of programs developers write.  This new line of
+research is inherently interdisciplinary, uniting the machine learning and
+natural language processing communities with software engineering
+and programming language communities.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+#### Browse Papers by Tag
+{% assign rawtags = Array.new %}
+{% for publication in site.publications %}
+  {% assign ttags = publication.tags  %}  
+  {% assign rawtags = rawtags | concat: ttags %}  
+{% endfor %}
+{% assign rawtags = rawtags | uniq | sort %}
+{% for tag in rawtags %}<tag><a href="/tags.html#{{ tag }}">{{ tag }}</a></tag> {% endfor %}
 
-```markdown
-Syntax highlighted code block
+### About This Site
 
-# Header 1
-## Header 2
-### Header 3
+This site is an experiment: a [living literature review](https://en.wikipedia.org/wiki/Living_review) that allows
+you explore, [search and navigate]({% link papers.html %}) the literature in this area, by
+following a [taxonomy]({% link base-taxonomy/index.md %})
+based on the underlying design principles of each model.
+The full survey is available [as a research paper](https://arxiv.org/abs/1709.06182).
+Please cite as
+<pre>
+@article{allamanis2018survey,
+  title={A survey of machine learning for big code and naturalness},
+  author={Allamanis, Miltiadis and Barr, Earl T and Devanbu, Premkumar and Sutton, Charles},
+  journal={ACM Computing Surveys (CSUR)},
+  volume={51},
+  number={4},
+  pages={81},
+  year={2018},
+  publisher={ACM}
+}
+</pre>
 
-- Bulleted
-- List
+### Contributing
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/minghao-97/minghao-97.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+This research area is evolving so fast that a static review cannot keep up.
+But a website can! We hope to make this site a living document.
+Anyone can add a paper to this web site, essentially by creating one Markdown file.
+ To contribute, open a pull request in GitHub, by following [these instructions 
+for contributing](contributing.html).
