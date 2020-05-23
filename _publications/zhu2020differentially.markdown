@@ -2,7 +2,7 @@
 layout: publication
 title: "Differentially private model publishing in cyber physical systems"
 authors: T. Zhu, P. Xiong, G. Li, W. Zhou, SY. Philip
-conference: FGC 
+conference: Future Generation Computer
 year: 2020
 bibkey: zhu2020differentially
 additional_links:

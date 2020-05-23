@@ -2,7 +2,7 @@
 layout: publication
 title: "The roadmap to 6G: AI empowered wireless networks"
 authors: KB. Letaief, W. Chen, Y. Shi, J. Zhang
-conference: IEEECommunications 
+conference: IEEE Communications 
 year: 2019
 bibkey: latief2019the
 additional_links:
