@@ -1,14 +1,38 @@
 ---
-layout: publication
-title: 6G wireless communications: Vision and potential techniques
-authors: P Yang, Y Xiao, M Xiao, S Li
-conference: IEEE Network
-year: 2019
-bibkey: Yang20196G
-additional_links:
-<!--   - {name: "ArXiV", url: "http://arxiv.org/abs/XXXX.YYYY"}-->
-   - {name: "IEEE website", url: "https://ieeexplore.ieee.org/abstract/document/8782879"}
-<!--   - {name: "code", url: "https://github.com/path-to/code"}-->
-tags: ["6G", "Introduction"]
+layout: page
+title: Contributing
+description: How to contribute to this website.
 ---
-With the fast development of smart terminals and emerging new applications (e.g., real-time and interactive services), wireless data traffic has drastically increased, and current cellular networks (even the forthcoming 5G) cannot completely match the quickly rising technical requirements. To meet the coming challenges, the sixth generation (6G) mobile network is expected to cast the high technical standard of new spectrum and energy-efficient transmission techniques. In this article, we sketch the potential requirements and present an overview of the latest research on the promising techniques evolving to 6G, which have recently attracted considerable attention. Moreover, we outline a number of key technical challenges as well as the potential solutions associated with 6G, including physical-layer transmission techniques, network designs, security approaches, and testbed developments.
+
+Contributions of new or missing publications are very welcome. Alternative categorization/taxonomies can also be added to the website. To contribute, please [open a pull request](https://github.com/ml4code/ml4code.github.io), but first please read the instructions below.
+
+### Adding a publication
+To add a publication (new or missing), create a file in the `_publications` folder. The name of the file should follow the structure `lastnameYEARfirstword.markdown` where `lastname` is the last name of the first author and `firstword` is the first non-punctuation word of the work's title. Within each file, follow the structure shown in the other files. Once the file is added, the work will appear in the "All Papers" section.
+<pre>
+---
+layout: publication
+title: The title of the Publication
+authors: F. M. LastName, F. M. LastName, ...
+conference: AbbreviatedNameOfConference
+year: YEAR
+bibkey: lastnameYEARfirstword
+additional_links:
+   - {name: "ArXiV", url: "http://arxiv.org/abs/XXXX.YYYY"}
+   - {name: "website", url: "http://paperwebsite.com"}
+   - {name: "code", url: "https://github.com/path-to/code"}
+tags: ["tag1", "tag2"]
+---
+Text of abstract goes here.
+</pre>
+
+The `additional_links` are optional and arbitrary and they will appear on the page referring to this work. Feel free to add as many additional links as needed.
+
+### Adding a new categorization
+No single taxonomy or categorization can fit everyone. It is easy to contribute a new categorization to be shown in this website. First, create a data file, similar to those in the `_data` file describing your taxonomy.
+This can be a JSON, YAML or CSV file as described [here](https://jekyllrb.com/docs/datafiles/).
+Then, create a folder and a page (or pages) that describe your taxonomy. Finally, submit a pull
+request to get this merged into the website.
+
+### Reusing the website structure
+In principle, the structure of this website can be used for other literature reviews. Feel free to clone it!
+
