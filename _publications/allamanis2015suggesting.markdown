@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: Suggesting Accurate Method and Class Names
+title: "Suggesting Accurate Method and Class Names"
 authors: M. Allamanis, E. T. Barr, C. Bird, C. Sutton
 conference: FSE
 year: 2015
