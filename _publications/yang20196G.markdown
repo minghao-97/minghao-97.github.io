@@ -2,7 +2,7 @@
 layout: publication
 title: "6G Wireless Communications: Vision and Potential Techniques"
 authors: P. Yang, Y. Xiao, M. Xiao, S. Li 
-conference: IEEENetwork 
+conference: IEEE Network 
 year: 2019
 bibkey: yang20196G
 additional_links:
